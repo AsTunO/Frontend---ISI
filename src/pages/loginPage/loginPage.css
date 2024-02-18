@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Define a altura do corpo para preencher toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
+    background-image: url('../../imgs/back-login.png');
+    background-position: center; /* Centralizar a imagem */
+    background-repeat: no-repeat; /* Evitar repetição da imagem */
+}
+
+.login-page {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 150px;
+}
