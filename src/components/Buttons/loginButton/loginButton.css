@@ -1,11 +1,12 @@
 .login-button {
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border: none; /* Remover a borda */
-    border-radius: 5px; /* Adicionar borda arredondada */
-    cursor: pointer; /* Mudar cursor ao passar por cima */
+    background-color: #AE3C33; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 45px; 
+    cursor: pointer; 
+    width: 50%;
 }
 
 .login-button:hover {

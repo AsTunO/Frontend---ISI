@@ -1,16 +1,26 @@
-import CPFInput from '../../components/Inputs/cpfInput/cpfInput.jsx'
-import PasswordInput from '../../components/Inputs/passwordInput/passwordInput.jsx'
-import LoginButton from '../../components/Buttons/loginButton/loginButton.jsx'
-import './loginPage.css'
+import { useNavigate } from 'react-router-dom';
+import CPFInput from '../../components/Inputs/cpfInput/cpfInput.jsx';
+import PasswordInput from '../../components/Inputs/passwordInput/passwordInput.jsx';
+import LoginButton from '../../components/Buttons/loginButton/loginButton.jsx';
+import './loginPage.css';
 
-function loginPage() {
+function LoginPage() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    console.log("opaaa")
+    navigate('/home');
+  };
+
   return (
     <div className="login-page">
-      <CPFInput />
-      <PasswordInput />
-      <LoginButton />
+      <div className="login-card">
+        <CPFInput />
+        <PasswordInput />
+        <LoginButton onClick={handleLogin} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default loginPage
+export default LoginPage;

@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import LoginPage from './pages/loginPage/loginPage.jsx';
+import { createRoot } from 'react-dom/client'; 
+import Routes from './pages/Routes.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root')); 
+
+root.render(
   <React.StrictMode>
-    <LoginPage />
+    <Routes />
   </React.StrictMode>
 );
