@@ -1,0 +1,27 @@
+.btn, .nav-btn img, .nav-btn h2 {
+    background-color: var(--light-grey);
+}
+
+.nav-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn img {
+    width: 50px;
+}
+
+.btn:hover, .btn:hover img, .btn:hover h2 {
+    background-color: var(--dark-grey);
+}
+
+.nav-btn h2 {
+    margin-right: 15px;
+}
