@@ -1,7 +1,25 @@
-.header-image {
-    width: 100px;
+.header-container {
+    width: 100%;
 }
 
 .header-line {
     border: 1px solid #AE3C33;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header-image, .header-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+}
+
+.header-title {
+    justify-content: center;
+    align-items: center;
 }
