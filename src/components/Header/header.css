@@ -3,7 +3,7 @@
 }
 
 .header-line {
-    border: 1px solid #AE3C33;
+    border: 1px solid var(--main-red);
 }
 
 .header-content {
@@ -22,4 +22,9 @@
 .header-title {
     justify-content: center;
     align-items: center;
+}
+
+.header-image {
+    /* position: absolute; */
+    z-index: 100;
 }
