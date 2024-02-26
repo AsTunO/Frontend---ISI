@@ -2,18 +2,18 @@
 import Header from '../../components/Header/header.jsx' 
 import ImageComponent from '../../components/others/profileImage.jsx'
 import ProfileCard from '../../components/others/profileCard.jsx';
-import LoginButton from '../../components/Buttons/loginButton/loginButton.jsx';
 import ProfileButton from '../../components/Buttons/profileButton/profileButton.jsx';
-
+import { useNavigate } from 'react-router-dom';
 import './profilePage.css'
 
 
 
 function profilePage() {
-  const toEditPage = () => {
-    alert('abrir tela da editar');
-    // Adicione lógica de autenticação, chamadas à API, etc.
-  };
+  
+  const navigate = useNavigate();
+    const toEditPage = () => {
+    navigate('/home'); // mudar isso depois
+    };
 
   return (
     <div>
