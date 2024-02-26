@@ -12,10 +12,10 @@ function homePage() {
     <div className="home-page">
       <Header title={"Página Inicial"} />
       <div className="cards-list">
-        <Card title={"Dashboard"} alt={"admin icon"} icon={dashboardIconImage}/>
-        <Card title={"Relatório"} alt={"admin icon"} icon={reportIconImage}/>
-        <Card title={"Usuário"} alt={"admin icon"} icon={userIconImage}/>
-        <Card title={"Cria Administrador"} alt={"admin icon"} icon={adminIconImage}/>
+        <Card title={"Dashboard"} alt={"admin icon"} icon={dashboardIconImage} route={"/"} />
+        <Card title={"Relatório"} alt={"admin icon"} icon={reportIconImage} route={"/"} />
+        <Card title={"Usuário"} alt={"admin icon"} icon={userIconImage} route={"/"} />
+        <Card title={"Cria Administrador"} alt={"admin icon"} icon={adminIconImage} route={"/new-adm"} />
       </div>
     </div>
   )

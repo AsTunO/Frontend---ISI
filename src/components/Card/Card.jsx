@@ -1,8 +1,16 @@
+/* eslint-disable react/prop-types */
+import { useNavigate } from "react-router-dom";
 import "./card.css";
 
-function adminCard(props) {
+function Card(props) {
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate(props.route);
+    }
+
     return(
-        <div className="card-container">
+        <div className="card-container" onClick={handleClick}>
             <img
                 src={ props.icon }
                 alt={ props.alt }
@@ -13,4 +21,4 @@ function adminCard(props) {
     )
 }
 
-export default adminCard
+export default Card;
