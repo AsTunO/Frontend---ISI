@@ -15,7 +15,7 @@ function homePage() {
         <Card title={"Dashboard"} alt={"admin icon"} icon={dashboardIconImage}/>
         <Card title={"Relatório"} alt={"admin icon"} icon={reportIconImage}/>
         <Card title={"Usuário"} alt={"admin icon"} icon={userIconImage}/>
-        <Card title={"Criar Administrador"} alt={"admin icon"} icon={adminIconImage}/>
+        <Card title={"Cria Administrador"} alt={"admin icon"} icon={adminIconImage}/>
       </div>
     </div>
   )
