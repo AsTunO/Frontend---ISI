@@ -8,7 +8,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    console.log("opaaa")
+    // console.log("opaaa")
     navigate('/home');
   };
 
