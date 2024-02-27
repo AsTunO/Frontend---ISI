@@ -1,5 +1,6 @@
 import './reportsPage.css'
 import Header from '../../components/Header/header.jsx' 
+import Sidebar from '../../components/Sidebar/Sidebar.jsx'
 
 function reportsPage(){
     return (
