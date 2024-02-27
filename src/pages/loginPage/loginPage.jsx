@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import CPFInput from '../../components/Inputs/cpfInput/cpfInput.jsx';
 import PasswordInput from '../../components/Inputs/passwordInput/passwordInput.jsx';
-import LoginButton from '../../components/Buttons/loginButton/loginButton.jsx';
+import StandartButton from '../../components/Buttons/standartButton/standartButton.jsx';
 import './loginPage.css';
 
 function LoginPage() {
@@ -17,7 +17,7 @@ function LoginPage() {
       <div className="login-card">
         <CPFInput />
         <PasswordInput />
-        <LoginButton onClick={handleLogin} />
+        <StandartButton onClick={handleLogin} name={"Entrar"}/>
       </div>
     </div>
   );
