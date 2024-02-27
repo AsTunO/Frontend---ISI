@@ -1,14 +1,18 @@
 import "./header.css"
 import backLoginImage from "../../imgs/header-logo.png";
 
-function header() {
+function header(props) {
+    
     return (
         <div className="header-container">
-            <img
-                src={backLoginImage}
-                alt="Logo da UPE Caruaru"
-                className="header-image"
-            />
+            <div className="header-content">
+                <img
+                    src={backLoginImage}
+                    alt="Logo da UPE Caruaru"
+                    className="header-image"
+                />
+                <span className="header-title"><h1>{ props.title }</h1></span>
+            </div>
             <hr className="header-line" />
         </div>
     )

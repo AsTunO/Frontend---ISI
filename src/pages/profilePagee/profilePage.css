@@ -1,0 +1,72 @@
+.login-box {
+    width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .text {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid #AE3C33; 
+    padding-bottom: 10px; 
+    display: flex;
+    
+  }
+
+
+.profile-card-container {
+  display: flex; /* Torna os filhos flexíveis (itens na mesma linha) */
+  background-color: #ffffff;
+  border-radius: 40px; /* Bordas arredondadas, ajuste conforme necessário */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra, ajuste conforme necessário */
+  margin-bottom: 10px;
+  width: 140%;
+  height: 10%;
+  margin-left: 10px;
+
+}  
+
+.label-container {
+  border-radius: 40px; /* Bordas arredondadas à esquerda */
+  background-color: #AE3C33;  /* Cor de fundo para a label, ajuste conforme necessário */
+  width: 100px;
+}
+
+.label-text{
+  font-size: 18px;
+  margin: 6px;
+  padding-left: 5px;
+  font-weight: 500;
+  color: #ffffff;
+  
+}
+
+.value-text{
+  padding-left: 10px;
+  font-size: 18px;
+  margin: 5px;
+  font-weight: 500;
+  
+}
+
+.profile-section{
+  display: flex;
+  align-items: center;
+
+}
+
+.aligment{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+
+
+  
