@@ -8,14 +8,14 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    console.log("opaaa")
+    // console.log("opaaa")
     navigate('/home');
   };
 
   return (
     <div className="login-page">
       <div className="login-card">
-        <CPFInput />
+        <CPFInput placeholder={"Digite seu CPF"} />
         <PasswordInput />
         <StandartButton onClick={handleLogin} name={"Entrar"}/>
       </div>
