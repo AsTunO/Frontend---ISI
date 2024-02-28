@@ -1,7 +1,7 @@
 .header-container {
     width: 100%;
-    height: auto;
-    position: fixed;
+    height: 5.1rem;
+    /* position: fixed; */
     background-color: var(--ice-white);
 }
 
