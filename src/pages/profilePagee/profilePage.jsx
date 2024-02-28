@@ -1,12 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 
 import Header from '../../components/Header/header.jsx' 
 import ImageComponent from '../../components/others/profileImage.jsx'
 import ProfileCard from '../../components/others/profileCard.jsx';
 import ProfileButton from '../../components/Buttons/profileButton/profileButton.jsx';
-import { useNavigate } from 'react-router-dom';
+import Sidebar from "../../components/Sidebar/sidebar.jsx";
+
 import './profilePage.css'
-
-
 
 function profilePage() {
   
@@ -17,7 +17,8 @@ function profilePage() {
 
   return (
     <div>
-      <Header />
+      <Header title={"Seu Perfil"} />
+      <Sidebar />
       <div className='aligment'>
         <div className='login-box'>
           <p className= 'text'> Página do usuário</p>
