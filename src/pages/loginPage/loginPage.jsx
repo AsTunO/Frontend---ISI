@@ -15,7 +15,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <CPFInput />
+        <CPFInput placeholder={"Digite seu CPF"} />
         <PasswordInput />
         <StandartButton onClick={handleLogin} name={"Entrar"}/>
       </div>
