@@ -10,6 +10,7 @@
     transition: background-color 0.2s ease;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-top: 1rem;
 }
 
 .button:hover {

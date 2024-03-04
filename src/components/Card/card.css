@@ -27,6 +27,7 @@
 .card-container:hover {
     transform: scale(1.1); /* Aumenta o tamanho do card em 10% */
     box-shadow: 0px 0px 10px rgba(243, 41, 41, 0.7); /* Ajusta a sombra para parecer mais proeminente */
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -38,5 +39,9 @@
 
     .card-container img {
         width: 25%;
+    }
+
+    .sidebar {
+        display: none;
     }
 }

@@ -43,6 +43,7 @@ function NewAdmPage() {
             toast.error("Todos os campos com * devem ser preenchidos!");
         }
         else {
+            console.log(photoInput);
             toast.success("Usuário criado com sucesso!");
             navigate("/home");
         }
@@ -63,15 +64,12 @@ function NewAdmPage() {
                 <CPFInput placeholder={"CPF*"} name={"cpf"} onChange={handleCpfChange} />
                 <GenericInput placeholder={"Link para foto"} name={"photo"} onChange={handlePhotoChange} />
 
-                <span>O novo usuáro será criado com a senha padrão: upe.c@ru@ru</span>
+                <span>O novo usuáro será criado com a senha padrão: upe.c@ru@ru<br /></span>
                 <span>Será solicitado alteração de senha no primeiro acesso</span>
-                <span className="last">Será criado um novo administrador, que poderá visualizar o dashboard e os relatórios, porém ele não conseguirá adicionar novos administradores.</span>
+                <span>Será criado um novo administrador, que poderá visualizar o dashboard e os relatórios, porém ele não conseguirá adicionar novos administradores.</span>
 
-                {/* <button>Criar</button> */}
                 <StandartButton name={"Criar"} onClick={handleSubmit}/>
                 </form>
-            </div>
-            <div className="msg">
             </div>
         </div>
     );
