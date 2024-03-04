@@ -8,5 +8,5 @@
     left: 0;
     padding-left: 0;
     /* z-index: 100; */
-    background-color: #d2e0f7;
+    background-color: var(--ice-white);
 }
