@@ -33,12 +33,15 @@
 @media (max-width: 800px) {
     .card-container {
         flex-direction: row;
+        justify-content: left;
         border: 1px solid var(--light-red);
         padding: 1rem;
     }
 
     .card-container img {
         width: 25%;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .sidebar {
