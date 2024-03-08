@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../pages/profilePagee/profilePage.css'; // ajuste o caminho conforme necessário
 
 

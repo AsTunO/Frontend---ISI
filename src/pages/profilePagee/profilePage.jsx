@@ -8,7 +8,7 @@ import Sidebar from "../../components/Sidebar/sidebar.jsx";
 
 import './profilePage.css'
 
-function profilePage() {
+export default function ProfilePage() {
   
   const navigate = useNavigate();
     const toEditPage = () => {
@@ -38,5 +38,3 @@ function profilePage() {
     </div>
   )
 }
-
-export default profilePage
