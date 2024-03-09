@@ -4,6 +4,7 @@ import LoginPage from './loginPage/loginPage.jsx';
 import HomePage from './homePage/homePage.jsx';
 import ProfilePage from './profilePagee/profilePage.jsx';
 import NewAdmPage from './newAdmPage/newAdmPage.jsx';
+import DashboardPage from './dashboardPage/dashboardPage.jsx'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/new-adm" element={<NewAdmPage />} />
       </Routes>
