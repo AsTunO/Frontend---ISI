@@ -9,6 +9,7 @@ import CPFInput from "../../components/Inputs/cpfInput/cpfInput.jsx";
 import GenericInput from "../../components/Inputs/GenericInput/genericInput.jsx";
 import EmailInput from "../../components/Inputs/EmailInput/emailInput.jsx";
 import StandartButton from "../../components/Buttons/standartButton/standartButton.jsx";
+import Footer from "../../components/Footer/footer.jsx"
 
 import "./newAdmPage.css";
 
@@ -71,6 +72,7 @@ function NewAdmPage() {
                 <StandartButton name={"Criar"} onClick={handleSubmit}/>
                 </form>
             </div>
+            <Footer />
             <div className="msg">
             </div>
         </div>

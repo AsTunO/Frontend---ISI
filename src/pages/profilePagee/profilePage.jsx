@@ -5,6 +5,7 @@ import ImageComponent from '../../components/others/profileImage.jsx'
 import ProfileCard from '../../components/others/profileCard.jsx';
 import ProfileButton from '../../components/Buttons/profileButton/profileButton.jsx';
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
+import Footer from "../../components/Footer/footer.jsx"
 
 import './profilePage.css'
 
@@ -35,6 +36,7 @@ function profilePage() {
           <ProfileButton className = 'profile-button' onClick={toEditPage} />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
