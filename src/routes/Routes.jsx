@@ -5,6 +5,7 @@ import LoginPage from '../pages/loginPage/loginPage.jsx';
 import HomePage from '../pages/homePage/homePage.jsx';
 import ProfilePage from '../pages/profilePagee/profilePage.jsx';
 import NewAdmPage from '../pages/newAdmPage/newAdmPage.jsx';
+import ReportsPage from '../pages/reportsPage/reportsPage.jsx';
 import LogoutPage from "../pages/logoutPage/LogoutPage.jsx";
 
 import { ProtectedRoute } from './ProtectedRoute.jsx';
@@ -27,6 +28,10 @@ const Routes = () => {
                     element: <ProfilePage />
                 },
                 {
+                    path: "/reports",
+                    element: <ReportsPage />
+                },
+                {
                     path: "/new-adm",
                     element: <NewAdmPage />
                 },
@@ -44,9 +49,9 @@ const Routes = () => {
             element: <NotAuthenticatedRoutes />,
             children: [
                 {
-                    path: "/login",
+                    path: "/",
                     element: <LoginPage />,
-                  },
+                },
             ]
         },
       ];

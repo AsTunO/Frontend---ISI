@@ -1,5 +1,5 @@
 
-import { React, useState } from 'react';
+import { useState } from 'react';
 import Select from "react-select";
 
 
@@ -7,7 +7,7 @@ import './reportsPage.css'
 import Header from '../../components/Header/header.jsx'
 import Sidebar from '../../components/Sidebar/sidebar.jsx'
 
-function reportsPage() {
+function ReportsPage() {
 
   const [selected, setSelected] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(""); // Adiciona estado para armazenar a categoria selecionada
@@ -105,4 +105,4 @@ function reportsPage() {
   )
 }
 
-export default reportsPage
+export default ReportsPage;
