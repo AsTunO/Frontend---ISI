@@ -9,7 +9,7 @@ import Footer from "../../components/Footer/footer.jsx"
 
 import './profilePage.css'
 
-function profilePage() {
+export default function ProfilePage() {
   
   const navigate = useNavigate();
     const toEditPage = () => {
@@ -40,5 +40,3 @@ function profilePage() {
     </div>
   )
 }
-
-export default profilePage

@@ -10,6 +10,7 @@ function GenericInput(props) {
                 name={props.name}
                 placeholder={props.placeholder}           
                 onChange={props.onChange}   
+                value={props.value}
             />
         </div>
     );

@@ -1,8 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'; 
-import { Toaster } from "sonner";
+// import { Toaster } from "sonner";
 
-import Routes from './pages/Routes.jsx';
+// import Routes from './routes/Routes.jsx';
+import App from './App';
 
 import "./main.css";
 
@@ -10,7 +11,8 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Routes />
-    <Toaster richColors />
+    <App />
+    {/* <Routes />
+    <Toaster richColors position='top-right' /> */}
   </React.StrictMode>
 );
