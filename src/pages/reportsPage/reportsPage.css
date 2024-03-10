@@ -1,0 +1,87 @@
+#ResultContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background-color:  rgb(255, 255, 255);
+    padding-left: 300px;
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.ButtonType {
+    background-color: #9e9e9e ;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    width: 130px;
+    height: 60px;
+    border-radius: 60px;
+    font-size: 18px;
+}
+
+.ButtonType:hover {
+    background-color: #AE3C33;
+    color:  rgb(48, 48, 48);
+}
+
+.ButtonType:active {
+    background-color: #acacac; 
+}
+
+#SearchField {
+    background-color:  rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #848485;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+#GeneralSeachField {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff0000;
+    padding-left: 40px;
+    padding-bottom: 300px;
+    padding-top: 40px;
+    
+}
+
+#PrevSeachField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1300px;
+    margin-bottom: 40px;
+}
+
+.form-report{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.result-panel {
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    width: 1200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+
+}
+
+#blocks button{
+    margin-right: 20px;
+}
