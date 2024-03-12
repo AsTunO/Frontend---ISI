@@ -30,7 +30,7 @@ export default function ProfilePage() {
         try {
           const response = await api.get(`/user/${email}`);
           setNome(response.data.username);
-          setCpf(response.data.is_admin ? 'Administrador' : response.data.cpf);
+          setCpf(response.data.is_admin ? 'Administrador' : "Usuário comum");
           const new_photo = response.data.photo ? response.data.photo : profile;
           setPhoto(new_photo);
           console.log(response.data);
