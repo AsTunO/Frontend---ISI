@@ -12,9 +12,9 @@ import './loginPage.css';
 
 function LoginPage() {
     const navigate = useNavigate();
-    const { setToken } = useAuth();
+    const { setToken, setEmail } = useAuth();
     
-    const [email, setEmail] = useState("");
+    const [email, setEmailField] = useState("");
     const [senha, setSenha] = useState("");
 
     async function handleLogin(e) {
@@ -31,6 +31,7 @@ function LoginPage() {
 
         if (status == 200) {
             setToken(data.access_token)
+            setEmail(email)
             const rota = senha != "upe.c@ru@ru" ? "/" : "/fist-login"
             navigate(rota, { replace: true });
             toast.success(data.message);
@@ -48,7 +49,7 @@ function LoginPage() {
                 <GenericInput
                     type={"email"} 
                     placeholder={"Digite seu email"} 
-                    onChange={(e) => [setEmail(e.target.value)]} 
+                    onChange={(e) => [setEmailField(e.target.value)]} 
                     value={email}
                 />
 

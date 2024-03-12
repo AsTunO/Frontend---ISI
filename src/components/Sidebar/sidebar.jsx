@@ -14,7 +14,7 @@ function Sidebar() {
             <NavButton icon={homeIcon} title={"Home"} alt={"home icon"} route={"/home"} />
             <NavButton icon={dashboardIcon} title={"Dashboard"} alt={"dashboard icon"} route={"/"} />
             <NavButton icon={reportIcon} title={"Relatório"} alt={"report icon"} route={"/reports"} />
-            <NavButton icon={userIcon} title={"Usuário"} alt={"user icon"} route={"/"} />
+            <NavButton icon={userIcon} title={"Usuário"} alt={"user icon"} route={"/profile"} />
             <NavButton icon={newAdminIcon} title={"Criar Admin"} alt={"new adm icon"} route={"/new-adm"} />
             <NavButton icon={newAdminIcon} title={"Deslogar"} alt={"logout icon"} route={"/logout"} />
         </div>

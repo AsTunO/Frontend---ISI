@@ -1,6 +1,20 @@
 import axios from "axios";
 
-export default axios.create({
+const api = axios.create({
     baseURL: "http://127.0.0.1:5000",
-    headers: { "origins": "http://localhost:5173" }
+    // baseURL: "https://835b-200-133-1-66.ngrok-free.app",
+    headers: { "origins": "http://10.1.2.127:5173" }
 });
+
+api.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem("token");
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
+
+export default api;
