@@ -1,8 +1,8 @@
 import "./dashboardPage.css"
 
-import LineChart from "../../components/Charts/lineChart.jsx"
-import SankeyChart from "../../components/Charts/sankeyChart.jsx"
-import BarChart from "../../components/Charts/barChart.jsx"
+import BarChartProfessor from "../../components/Charts/Professor/barChartProfessor.jsx"
+import BarChartStudent from "../../components/Charts/Student/barChartStudent.jsx"
+import LineChartSubject from "../../components/Charts/Subject/lineChartSubject.jsx"
 
 function dashboardPage() {
 
@@ -12,9 +12,9 @@ function dashboardPage() {
                 Dashboard
             </div>
 
-            <LineChart />
-            <SankeyChart />
-            <BarChart />
+            <BarChartProfessor />
+            <BarChartStudent />
+            <LineChartSubject />
         </>
     )
 }
