@@ -1,0 +1,9 @@
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.chart-container > * {
+    flex: 1; /* Para dividir o espaço igualmente entre os elementos */
+}

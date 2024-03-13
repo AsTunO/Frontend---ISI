@@ -39,22 +39,30 @@ export const options = {
     chartArea: { width: "50%" },
     isStacked: true,
     hAxis: {
-        title: "Total de disciplinas",
+        title: "Numero de disciplinas",
         minValue: 0,
     },
     vAxis: {
-        title: "Nome",
+        title: "Professor",
     },
 };
 
 function barChart() {
+    const chartStyle = {
+        marginLeft: '150px',
+        marginBottom: '20px',
+        marginTop: "40px",
+        marginRight: "20px"
+    };
+
     return (
         <Chart
             chartType="BarChart"
-            width="100%"
-            height="400px"
+            width="65%" // reduzindo o tamanho do gráfico
+            height="300px" // reduzindo o tamanho do gráfico
             data={realdata}
             options={options}
+            style={chartStyle}
         />
     )
 }

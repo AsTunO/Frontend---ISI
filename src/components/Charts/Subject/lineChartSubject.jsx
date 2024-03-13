@@ -26,21 +26,28 @@ let data = [
 const transformedData = data.map(item => [item['Subject'], item['Attending students rate']]);
 
 export const options = {
-    title: "Attending Students Rate by Subject",
+    title: "Taxa de aprovação por disciplina",
     legend: { position: "top" },
     colors: ["#5C3292"],
-    hAxis: { title: "Subject" },
-    vAxis: { title: "Attending students rate" },
+    hAxis: { title: "Disciplina" },
+    vAxis: { title: "Taxa de aprovação" },
 };
 
 function LineChart() {
+
+    const chartStyle = {
+        marginTop: '100px',
+        marginLeft: '150px',
+        marginBottom: '20px',
+    };
     return (
         <Chart
             chartType="LineChart"
-            width="100%"
-            height="400px"
+            width="80%"
+            height="200px"
             data={[['Subject', 'Attending students rate'], ...transformedData]}
             options={options}
+            style={chartStyle}
         />
     );
 }

@@ -3,6 +3,7 @@
     height: 5.1rem;
     top: 0;
     position: fixed;
+    z-index: 1;
     background-color: var(--ice-white);
 }
 
@@ -13,6 +14,7 @@
 .header-content {
     display: grid;
     grid-template-columns: 1fr;
+    height: 5.1rem;
 }
 
 .header-image, .header-title {
@@ -31,4 +33,15 @@
 .header-image {
     /* position: absolute; */
     z-index: 100;
+}
+
+@media (max-width: 1280px) {
+    .header-image {
+        display: none;
+    }
+
+    .header-title {
+        margin: 0 auto;
+        font-size: small;
+    }
 }

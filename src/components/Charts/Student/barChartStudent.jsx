@@ -36,19 +36,26 @@ let data = [
 const transformedData = transformData(data);
 
 export const options = {
-    title: "Total number of students and average per subject",
+    title: "Estudantes por disciplina",
     legend: { position: "top" },
     colors: ["#5C3292", "#1A8763"],
 };
 
 function BarChart() {
+
+    const chartStyle = {
+        marginBottom: '20px',
+        marginTop: "100px"
+    };
+
     return (
         <Chart
             chartType="Bar"
-            width="100%"
-            height="400px"
+            width="60%"
+            height="200px"
             data={transformedData}
             options={options}
+            style={chartStyle}
         />
     );
 }

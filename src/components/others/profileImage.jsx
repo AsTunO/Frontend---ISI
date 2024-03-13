@@ -1,7 +1,4 @@
 
-import React from 'react';
-
-
 function ImageComponent({ src, alt }) {
   return (
     <img
@@ -12,6 +9,7 @@ function ImageComponent({ src, alt }) {
         height: '140px',
         borderRadius: '50%',
         border: '3px solid #AE3C33', // Largura e cor da borda
+        marginBottom: "2rem",
       }}
     />
   );
