@@ -1,0 +1,146 @@
+[{
+    "ano_entrada": 2018,
+    "arg_class": "496.70",
+    "cpf": "111.616.457-79",
+    "nome": "Luciana Eduardo",
+    "subjects": [
+        {
+            "carga_horaria": 60,
+            "codigo": "DQWK5062",
+            "credito": 4,
+            "id": 40,
+            "matricula_professor": 6345,
+            "nome": "Teoria da Cor",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "OOMD7322",
+            "credito": 4,
+            "id": 38,
+            "matricula_professor": 6031,
+            "nome": "Design de Interacao em Tempo Real",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "VJCE8512",
+            "credito": 3,
+            "id": 30,
+            "matricula_professor": 5832,
+            "nome": "Design de Espacos Virtuais",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "ZGIQ4964",
+            "credito": 3,
+            "id": 29,
+            "matricula_professor": 8903,
+            "nome": "Design de Interacao",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "BKUB1356",
+            "credito": 3,
+            "id": 24,
+            "matricula_professor": 2167,
+            "nome": "Psicologia do Consumidor",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "LVCS7630",
+            "credito": 4,
+            "id": 28,
+            "matricula_professor": 6450,
+            "nome": "Simulacao e Prototipagem Rapida",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 30,
+            "codigo": "WYHU9036",
+            "credito": 2,
+            "id": 14,
+            "matricula_professor": 6345,
+            "nome": "Design de Arte Publica",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "SJYP3584",
+            "credito": 4,
+            "id": 4,
+            "matricula_professor": 1862,
+            "nome": "Design de Interacao Emocional",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 30,
+            "codigo": "ETQV0180",
+            "credito": 2,
+            "id": 11,
+            "matricula_professor": 5739,
+            "nome": "Fabricacao Digital",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "XAOB0773",
+            "credito": 4,
+            "id": 16,
+            "matricula_professor": 4812,
+            "nome": "Criacao de Personagens",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "AWSZ2631",
+            "credito": 3,
+            "id": 20,
+            "matricula_professor": 6823,
+            "nome": "Arquitetura de Informacao",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "NLMP3938",
+            "credito": 4,
+            "id": 8,
+            "matricula_professor": 1765,
+            "nome": "Gamificacao",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "QXRF4917",
+            "credito": 3,
+            "id": 33,
+            "matricula_professor": 4812,
+            "nome": "Design Grafico",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "FMZX7979",
+            "credito": 4,
+            "id": 2,
+            "matricula_professor": 7491,
+            "nome": "Semi¢tica",
+            "tipo": 1
+        },
+        {
+            "carga_horaria": 60,
+            "codigo": "TPTS9434",
+            "credito": 4,
+            "id": 7,
+            "matricula_professor": 5316,
+            "nome": "Design de Produto",
+            "tipo": 1
+        }
+    ]
+}
+
+
+]

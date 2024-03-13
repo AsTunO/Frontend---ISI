@@ -1,13 +1,14 @@
 import './homePage.css'
 import Header from '../../components/Header/header.jsx' 
-import CardsList from "../../components/Cards/CardsList/cardsList.jsx"
+import CardsList from '../../components/CardsList/cardsList.jsx'
+import Footer from "../../components/Footer/footer.jsx"
 
 function homePage() {
   return (
     <div className="home-page">
-      <Header />
-      <span className='home-page-title'>Página Inicial</span>
+      <Header title={"Página Inicial"} />
       <CardsList />
+      <Footer />
     </div>
   )
 }
