@@ -4,7 +4,6 @@ import './passwordInput.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Importando ícones do React Icons
 
 function PasswordInput(props) {
-function PasswordInput(props) {
     const [showPassword, setShowPassword] = useState(false);
 
     return (

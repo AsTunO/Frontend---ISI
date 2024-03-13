@@ -7,6 +7,7 @@ import HomePage from '../pages/homePage/homePage.jsx';
 import ProfilePage from '../pages/profilePagee/profilePage.jsx';
 import NewAdmPage from '../pages/newAdmPage/newAdmPage.jsx';
 import ReportsPage from '../pages/reportsPage/reportsPage.jsx';
+import DashboardPage from '../pages/dashboardPage/dashboardPage.jsx';
 import LogoutPage from "../pages/logoutPage/LogoutPage.jsx";
 
 import { ProtectedRoute } from './ProtectedRoute.jsx';
@@ -43,6 +44,10 @@ const Routes = () => {
                 {
                     path: "/first-login",
                     element: <FirstLoginPage />
+                },
+                {
+                    path: "/dashboard",
+                    element: <DashboardPage />
                 }
             ]
         }
