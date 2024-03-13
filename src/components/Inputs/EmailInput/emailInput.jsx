@@ -8,7 +8,8 @@ function EmailInput(props) {
                 name='email'
                 onClick={props.onClick}
                 onChange={props.onChange}
-                placeholder={props.placeholder}                
+                placeholder={props.placeholder}
+                onKeyPress={props.onKeyPress}
             />
         </div>
     );

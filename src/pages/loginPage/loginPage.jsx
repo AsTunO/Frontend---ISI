@@ -20,7 +20,12 @@ function LoginPage() {
     async function handleLogin(e) {
         e.preventDefault();
 
-        const { data, status} = await api.post("/login", {email, senha}).catch((error) => {
+        const send_data = {
+            email: email,
+            senha: senha
+        }
+
+        const { data, status} = await api.post("/login", send_data).catch((error) => {
             const status = error.response.status;
             const data = error.response.data;
             return { data, status };
@@ -32,13 +37,19 @@ function LoginPage() {
         if (status == 200) {
             setToken(data.access_token)
             setEmail(email)
-            const rota = senha != "upe.c@ru@ru" ? "/" : "/fist-login"
+            const rota = senha != "upe.c@ru@ru" ? "/" : "/first-login"
             navigate(rota, { replace: true });
             toast.success(data.message);
         } else if (status == 400) {
             toast.warning(data.message);
         } else {
             toast.error(data.message);
+        }
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            handleLogin(e);
         }
     }
 
@@ -51,11 +62,13 @@ function LoginPage() {
                     placeholder={"Digite seu email"} 
                     onChange={(e) => [setEmailField(e.target.value)]} 
                     value={email}
+                    onKeyPress={handleKeyPress}
                 />
 
                 <PasswordInput
                     onChange={(e) => [setSenha(e.target.value)]}
                     value={senha}
+                    onKeyPress={handleKeyPress}
                 />
 
                 <StandartButton onClick={handleLogin} name={"Entrar"} type={"button"} />

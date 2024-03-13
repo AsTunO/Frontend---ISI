@@ -2,6 +2,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import LoginPage from '../pages/loginPage/loginPage.jsx';
+import FirstLoginPage from '../pages/loginPage/firstLogin.jsx';
 import HomePage from '../pages/homePage/homePage.jsx';
 import ProfilePage from '../pages/profilePagee/profilePage.jsx';
 import NewAdmPage from '../pages/newAdmPage/newAdmPage.jsx';
@@ -38,6 +39,10 @@ const Routes = () => {
                 {
                     path: "/logout",
                     element: <LogoutPage />
+                },
+                {
+                    path: "/first-login",
+                    element: <FirstLoginPage />
                 }
             ]
         }

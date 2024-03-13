@@ -16,6 +16,7 @@ function PasswordInput(props) {
                     placeholder='Digite sua senha'
                     onChange={props.onChange}
                     value={props.value}
+                    onKeyPress={props.onKeyPress}
                 ></input>
                 <button
                     type='button'

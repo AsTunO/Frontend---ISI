@@ -22,7 +22,7 @@ export default function ProfilePage() {
     const [photo, setPhoto] = useState(profile);
 
     const toEditPage = () => {
-    navigate('/home'); // mudar isso depois
+      navigate('/home'); // mudar isso depois
     };
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function ProfilePage() {
           setCpf(response.data.is_admin ? 'Administrador' : "Usuário comum");
           const new_photo = response.data.photo ? response.data.photo : profile;
           setPhoto(new_photo);
-          console.log(response.data);
+          // console.log(response.data);
         } catch (error) {
           console.error(error);
         }

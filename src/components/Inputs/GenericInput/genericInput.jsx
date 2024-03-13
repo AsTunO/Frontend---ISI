@@ -11,6 +11,7 @@ function GenericInput(props) {
                 placeholder={props.placeholder}           
                 onChange={props.onChange}   
                 value={props.value}
+                onKeyPress={props.onKeyPress}
             />
         </div>
     );

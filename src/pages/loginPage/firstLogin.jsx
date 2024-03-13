@@ -4,15 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 import Header from "../../components/Header/header.jsx";
-import Sidebar from "../../components/Sidebar/sidebar.jsx";
-import CPFInput from "../../components/Inputs/cpfInput/cpfInput.jsx";
-import GenericInput from "../../components/Inputs/GenericInput/genericInput.jsx";
-import EmailInput from "../../components/Inputs/EmailInput/emailInput.jsx";
 import StandartButton from "../../components/Buttons/standartButton/standartButton.jsx";
 import PasswordInput from '../../components/Inputs/passwordInput/passwordInput.jsx';
-import "./fistLogin.css";
+import "./firstLogin.css";
 
-function FistLogin() {
+function FirstLoginPage() {
     const [passwordInput, setPasswordInput] = useState("");
     const [confirmPasswordInput, setConfirmPasswordInput] = useState("");
 
@@ -69,4 +65,4 @@ function FistLogin() {
     );
 }
 
-export default FistLogin;
+export default FirstLoginPage;

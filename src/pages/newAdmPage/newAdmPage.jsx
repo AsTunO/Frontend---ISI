@@ -5,48 +5,59 @@ import { toast } from "sonner";
 
 import Header from "../../components/Header/header.jsx";
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
-import CPFInput from "../../components/Inputs/cpfInput/cpfInput.jsx";
 import GenericInput from "../../components/Inputs/GenericInput/genericInput.jsx";
 import EmailInput from "../../components/Inputs/EmailInput/emailInput.jsx";
 import StandartButton from "../../components/Buttons/standartButton/standartButton.jsx";
 import Footer from "../../components/Footer/footer.jsx"
 
 import "./newAdmPage.css";
+import api from "../../Api.js";
 
 function NewAdmPage() {
     const [nameInput, setNameInput] = useState("");
     const [emailInput, setEmailInput] = useState("");
-    const [cpfInput, setCpfInput] = useState("");
-    const [photoInput, setPhotoInput] = useState("");
+    const [photoInput, setPhotoInput] = useState(null);
     const navigate = useNavigate();
 
-    function handleNameChange(event) {
-        setNameInput(event.target.value);
-    }
-
-    function handleEmailChange(event) {
-        setEmailInput(event.target.value);
-    }
-
-    function handleCpfChange(event) {
-        setCpfInput(event.target.value)
-    }
-
-    function handlePhotoChange(event) {
-        setPhotoInput(event.target.value);
-    }
-
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
 
         // TODO: além da validação pelo frontend, necessário validar junto a api
-        if (nameInput == "" || emailInput == "" || cpfInput == "") {
+        if (nameInput == "" || emailInput == "") {
             toast.error("Todos os campos com * devem ser preenchidos!");
         }
         else {
-            console.log(photoInput);
-            toast.success("Usuário criado com sucesso!");
-            navigate("/home");
+            const request = {
+                username: nameInput,
+                email: emailInput,
+                photo: photoInput,
+                senha: "upe.c@ru@ru"
+            }
+
+            // const response = await api.get("/user").catch((error) => {
+            const response = await api.post("/user", request)
+            .catch((error) => {
+                const status = error.response.status;
+                const data = error.response.data;
+                toast.error(data.message);
+                return { data, status };
+            });
+            console.log(response)
+            if (!response) {
+                navigate("/home");
+                toast.error("Apenas administradores podem criar novos administradores!");
+            }
+
+            if (response.status === 201) {
+                toast.success("Usuário criado com sucesso!");
+                navigate("/home");
+            }
+        }
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            handleSubmit(e);
         }
     }
 
@@ -60,10 +71,9 @@ function NewAdmPage() {
 
                 <h2>Digite os dados do novo Administrador</h2>
 
-                <GenericInput placeholder={"Nome*"} name={"name"} onChange={handleNameChange} />
-                <EmailInput placeholder={"Email*"} name={"email"} onChange={handleEmailChange} /> 
-                <CPFInput placeholder={"CPF*"} name={"cpf"} onChange={handleCpfChange} />
-                <GenericInput placeholder={"Link para foto"} name={"photo"} onChange={handlePhotoChange} />
+                <GenericInput placeholder={"Nome*"} name={"name"} onChange={(e) => [setNameInput(e.target.value)]} onKeyPress={handleKeyPress} />
+                <EmailInput placeholder={"Email*"} name={"email"} onChange={(e) => [setEmailInput(e.target.value)]} onKeyPress={handleKeyPress} /> 
+                <GenericInput placeholder={"Link para foto"} name={"photo"} onChange={(e) => [setPhotoInput(e.target.value)]} onKeyPress={handleKeyPress} />
 
                 <span>O novo usuáro será criado com a senha padrão: upe.c@ru@ru<br /></span>
                 <span>Será solicitado alteração de senha no primeiro acesso</span>
