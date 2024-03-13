@@ -18,7 +18,7 @@ export default function ProfilePage() {
   const navigate = useNavigate();
     const { email } = useAuth();
     const [nome, setNome] = useState('');
-    const [cpf, setCpf] = useState('');
+    const [userType, setUserType] = useState('');
     const [photo, setPhoto] = useState(profile);
 
     const toEditPage = () => {
@@ -30,7 +30,7 @@ export default function ProfilePage() {
         try {
           const response = await api.get(`/user/${email}`);
           setNome(response.data.username);
-          setCpf(response.data.is_admin ? 'Administrador' : "Usuário comum");
+          setUserType(response.data.is_admin ? 'Administrador' : "Usuário comum");
           const new_photo = response.data.photo ? response.data.photo : profile;
           setPhoto(new_photo);
           // console.log(response.data);
@@ -56,7 +56,7 @@ export default function ProfilePage() {
             <div className='image-container'>
               <ProfileCard  label='Nome' value={nome} />
               <ProfileCard  label='E-mail' value={email} />
-              <ProfileCard  label='Tipo' value={cpf} />
+              <ProfileCard  label='Tipo' value={userType} />
             </div>
           </div> 
           <ProfileButton className = 'profile-button' onClick={toEditPage} />

@@ -1,16 +1,24 @@
 /* eslint-disable react/jsx-no-undef */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 import Header from "../../components/Header/header.jsx";
 import StandartButton from "../../components/Buttons/standartButton/standartButton.jsx";
 import PasswordInput from '../../components/Inputs/passwordInput/passwordInput.jsx';
+import { useAuth } from '../../Context/AuthContext.jsx';
+import api from "../../Api.js";
+
 import "./firstLogin.css";
 
 function FirstLoginPage() {
+    const { email } = useAuth();
+
     const [passwordInput, setPasswordInput] = useState("");
     const [confirmPasswordInput, setConfirmPasswordInput] = useState("");
+
+    const [username, setUsername] = useState('');
+    const [photo, setPhoto] = useState(null);
 
     const navigate = useNavigate();
 
@@ -22,6 +30,39 @@ function FirstLoginPage() {
     function handleConfirmPasswordChange(event) {
         setConfirmPasswordInput(event.target.value);
     }
+
+    function changePassword() {
+        const request = {
+            username: username,
+            email: email,
+            photo: photo,
+            senha: passwordInput
+        }
+
+        try {
+            const response = api.put(`/user/${email}`, request);
+            return response;
+        } catch (error) {
+            const status = error.response.status;
+            const data = error.response.data;
+            toast.error(data);
+            return { data, status };
+        }
+    }
+
+    useEffect(() => {
+        const getUserData = async () => {
+          try {
+            const response = await api.get(`/user/${email}`);
+            setUsername(response.data.username);
+            setPhoto(response.data.photo);
+          } catch (error) {
+            console.error(error);
+          }
+        }
+  
+        getUserData();
+      }, [email]);
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -39,8 +80,14 @@ function FirstLoginPage() {
         } else if (passwordInput !== confirmPasswordInput) {
             toast.error("As senhas devem coincidir");
         } else {
-            toast.success("Usuário criado com sucesso!");
-            navigate("/home");
+            const response = changePassword();
+
+            if (response.status === 201) {
+                toast.success("Usuário criado com sucesso!");
+                navigate("/home");
+            } else {
+                toast.error(response.data);
+            }
         }
     }
     
