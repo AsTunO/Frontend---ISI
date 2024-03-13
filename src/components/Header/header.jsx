@@ -1,5 +1,6 @@
 import "./header.css"
 import backLoginImage from "../../imgs/header-logo.png";
+import LogoutButton from "../Buttons/LogoutButton/logoutButton";
 
 function header(props) {
     
@@ -12,6 +13,7 @@ function header(props) {
                     className="header-image"
                 />
                 <span className="header-title"><h1>{ props.title }</h1></span>
+                <LogoutButton route={"/logout"} />
             </div>
             <hr className="header-line" />
         </div>
